@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (e.data.gear !== lastGear && !isNaN(e.data.gear)) {
       $(".gear").remove();
 
-      $(".container").append(`<div class="gear">${e.data.gear}</div>`);
+      $(".container").append(`<div class="gear">${e.data.gear || "R"}</div>`);
 
       lastGear = e.data.gear;
     }
